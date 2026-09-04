@@ -1,0 +1,12 @@
+{
+  "mod_id": "dragon",
+  "project_id": "dfd6d777-5cd8-4ac7-bf14-e6f5c9211581",
+  "repository_id": "1356704930",
+  "schema_version": 2,
+  "template": {
+    "id": "neoforge",
+    "revision": null,
+    "sha256": null,
+    "version": "26.2"
+  }
+}

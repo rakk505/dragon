@@ -1,0 +1,13 @@
+{
+  "itemGroup.dragon": "dragon Tab",
+  "block.dragon.example_block": "Example Block",
+  "item.dragon.example_item": "Example Item",
+
+  "dragon.configuration.title": "dragon Configs",
+  "dragon.configuration.section.dragon.common.toml": "dragon Configs",
+  "dragon.configuration.section.dragon.common.toml.title": "dragon Configs",
+  "dragon.configuration.items": "Item List",
+  "dragon.configuration.logDirtBlock": "Log Dirt Block",
+  "dragon.configuration.magicNumberIntroduction": "Magic Number Text",
+  "dragon.configuration.magicNumber": "Magic Number"
+}
