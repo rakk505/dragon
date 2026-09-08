@@ -1,0 +1,3337 @@
+{
+  "schema_version": 1,
+  "id": "chinese_dragon_boss",
+  "reference": {
+    "image": "../references/chinese_dragon_concept.png",
+    "sha256": "9cdf69be2eb5ecd36fb5591f18f3b1f788f5c695d3e7e601ccf8f29de2ca722c",
+    "width": 1536,
+    "height": 1024
+  },
+  "subject": {
+    "type": "boss_mob",
+    "description": "An original Minecraft-native wingless Chinese dragon boss in a neutral flying pose, with sixteen continuous serpentine segments, four eagle-clawed legs, branching deer antlers, lion mane, catfish beard, long whiskers, and a tapered flame tail.",
+    "symmetry": "bilateral",
+    "uncertainties": [
+      "The direct concept is a side-dominant view; hidden-side geometry is mirrored conservatively.",
+      "Dynamic coil curvature and the attack pearl are animation/effect states, not static geometry."
+    ]
+  },
+  "quality_contract": {
+    "complexity": "complex",
+    "target_cuboids": [
+      90,
+      96
+    ],
+    "identity_features": [
+      "sixteen-part wingless serpent body",
+      "branching deer antlers",
+      "lion mane",
+      "bulging turquoise-pupiled eyes",
+      "paired segmented whiskers",
+      "four eagle-clawed legs",
+      "gold belly plates",
+      "vermilion dorsal ridge",
+      "three-pronged flame tail"
+    ],
+    "required_views": [
+      "front",
+      "back",
+      "left",
+      "right",
+      "isometric",
+      "left_head_closeup",
+      "right_head_closeup",
+      "connected_joint_closeup"
+    ],
+    "review_targets": [
+      "silhouette",
+      "face",
+      "joints",
+      "texture",
+      "rig_hierarchy",
+      "animation_clearance"
+    ]
+  },
+  "texture": {
+    "density": 2,
+    "palette_size": 32,
+    "gutter": 2,
+    "atlas_size": 512
+  },
+  "materials": {
+    "jade_scales": {
+      "base": "#355b48",
+      "shade": "#20372f",
+      "highlight": "#4f8065",
+      "pattern": "spots",
+      "pattern_scale": 3
+    },
+    "jade_light": {
+      "base": "#4f8065",
+      "shade": "#355b48",
+      "highlight": "#70a887",
+      "pattern": "dither",
+      "pattern_scale": 3
+    },
+    "deep_jade": {
+      "base": "#20372f",
+      "shade": "#14231f",
+      "highlight": "#355b48",
+      "pattern": "gradient",
+      "pattern_scale": 4
+    },
+    "gold_belly": {
+      "base": "#b99750",
+      "shade": "#765f32",
+      "highlight": "#dbc37e",
+      "pattern": "stripes",
+      "pattern_scale": 3
+    },
+    "vermilion_mane": {
+      "base": "#9e392d",
+      "shade": "#642a27",
+      "highlight": "#cf6047",
+      "pattern": "dither",
+      "pattern_scale": 3
+    },
+    "bone": {
+      "base": "#d5c6a0",
+      "shade": "#927e58",
+      "highlight": "#eee1bd",
+      "pattern": "gradient",
+      "pattern_scale": 4
+    },
+    "eye_gold": {
+      "base": "#dbc37e",
+      "shade": "#765f32",
+      "highlight": "#fff1ad",
+      "pattern": "solid",
+      "pattern_scale": 2
+    }
+  },
+  "bones": [
+    {
+      "name": "root",
+      "parent": null,
+      "pivot": [
+        0.0,
+        18.0,
+        28.0
+      ]
+    },
+    {
+      "name": "head",
+      "parent": "root",
+      "pivot": [
+        0.0,
+        18.0,
+        28.0
+      ]
+    },
+    {
+      "name": "jaw",
+      "parent": "head",
+      "pivot": [
+        0.0,
+        16.0,
+        38.0
+      ]
+    },
+    {
+      "name": "axial_00",
+      "parent": "root",
+      "pivot": [
+        0.0,
+        18.0,
+        28.0
+      ]
+    },
+    {
+      "name": "axial_01",
+      "parent": "axial_00",
+      "pivot": [
+        0.0,
+        18.2,
+        22.0
+      ]
+    },
+    {
+      "name": "axial_02",
+      "parent": "axial_01",
+      "pivot": [
+        0.8,
+        18.5,
+        16.0
+      ]
+    },
+    {
+      "name": "axial_03",
+      "parent": "axial_02",
+      "pivot": [
+        1.8,
+        18.7,
+        10.0
+      ]
+    },
+    {
+      "name": "axial_04",
+      "parent": "axial_03",
+      "pivot": [
+        2.5,
+        18.3,
+        4.0
+      ]
+    },
+    {
+      "name": "axial_05",
+      "parent": "axial_04",
+      "pivot": [
+        2.2,
+        17.8,
+        -2.0
+      ]
+    },
+    {
+      "name": "axial_06",
+      "parent": "axial_05",
+      "pivot": [
+        1.4,
+        17.3,
+        -8.0
+      ]
+    },
+    {
+      "name": "axial_07",
+      "parent": "axial_06",
+      "pivot": [
+        0.2,
+        17.0,
+        -14.0
+      ]
+    },
+    {
+      "name": "axial_08",
+      "parent": "axial_07",
+      "pivot": [
+        -1.0,
+        17.2,
+        -20.0
+      ]
+    },
+    {
+      "name": "axial_09",
+      "parent": "axial_08",
+      "pivot": [
+        -1.8,
+        17.7,
+        -26.0
+      ]
+    },
+    {
+      "name": "axial_10",
+      "parent": "axial_09",
+      "pivot": [
+        -2.0,
+        18.2,
+        -32.0
+      ]
+    },
+    {
+      "name": "axial_11",
+      "parent": "axial_10",
+      "pivot": [
+        -1.6,
+        18.5,
+        -38.0
+      ]
+    },
+    {
+      "name": "axial_12",
+      "parent": "axial_11",
+      "pivot": [
+        -0.8,
+        18.3,
+        -44.0
+      ]
+    },
+    {
+      "name": "axial_13",
+      "parent": "axial_12",
+      "pivot": [
+        0.1,
+        17.9,
+        -50.0
+      ]
+    },
+    {
+      "name": "axial_14",
+      "parent": "axial_13",
+      "pivot": [
+        0.9,
+        17.4,
+        -56.0
+      ]
+    },
+    {
+      "name": "axial_15",
+      "parent": "axial_14",
+      "pivot": [
+        1.3,
+        17.0,
+        -61.5
+      ]
+    },
+    {
+      "name": "horn_left_0",
+      "parent": "head",
+      "pivot": [
+        3.0,
+        24.5,
+        32.0
+      ]
+    },
+    {
+      "name": "horn_left_1",
+      "parent": "horn_left_0",
+      "pivot": [
+        3.4,
+        29.5,
+        29.8
+      ]
+    },
+    {
+      "name": "horn_left_2",
+      "parent": "horn_left_1",
+      "pivot": [
+        4.2,
+        34.2,
+        26.2
+      ]
+    },
+    {
+      "name": "horn_left_3",
+      "parent": "horn_left_0",
+      "pivot": [
+        3.5,
+        29.8,
+        29.4
+      ]
+    },
+    {
+      "name": "horn_left_4",
+      "parent": "horn_left_1",
+      "pivot": [
+        4.1,
+        34.0,
+        26.4
+      ]
+    },
+    {
+      "name": "horn_right_0",
+      "parent": "head",
+      "pivot": [
+        -3.0,
+        24.5,
+        32.0
+      ]
+    },
+    {
+      "name": "horn_right_1",
+      "parent": "horn_right_0",
+      "pivot": [
+        -3.4,
+        29.5,
+        29.8
+      ]
+    },
+    {
+      "name": "horn_right_2",
+      "parent": "horn_right_1",
+      "pivot": [
+        -4.2,
+        34.2,
+        26.2
+      ]
+    },
+    {
+      "name": "horn_right_3",
+      "parent": "horn_right_0",
+      "pivot": [
+        -3.5,
+        29.8,
+        29.4
+      ]
+    },
+    {
+      "name": "horn_right_4",
+      "parent": "horn_right_1",
+      "pivot": [
+        -4.1,
+        34.0,
+        26.4
+      ]
+    },
+    {
+      "name": "whisker_left_0",
+      "parent": "head",
+      "pivot": [
+        3.5,
+        17.2,
+        43.0
+      ]
+    },
+    {
+      "name": "whisker_left_1",
+      "parent": "whisker_left_0",
+      "pivot": [
+        7.5,
+        16.5,
+        46.0
+      ]
+    },
+    {
+      "name": "whisker_left_2",
+      "parent": "whisker_left_1",
+      "pivot": [
+        11.5,
+        15.0,
+        47.0
+      ]
+    },
+    {
+      "name": "whisker_left_3",
+      "parent": "whisker_left_2",
+      "pivot": [
+        15.0,
+        13.5,
+        45.5
+      ]
+    },
+    {
+      "name": "whisker_left_4",
+      "parent": "whisker_left_3",
+      "pivot": [
+        17.5,
+        14.5,
+        42.5
+      ]
+    },
+    {
+      "name": "whisker_right_0",
+      "parent": "head",
+      "pivot": [
+        -3.5,
+        17.2,
+        43.0
+      ]
+    },
+    {
+      "name": "whisker_right_1",
+      "parent": "whisker_right_0",
+      "pivot": [
+        -7.5,
+        16.5,
+        46.0
+      ]
+    },
+    {
+      "name": "whisker_right_2",
+      "parent": "whisker_right_1",
+      "pivot": [
+        -11.5,
+        15.0,
+        47.0
+      ]
+    },
+    {
+      "name": "whisker_right_3",
+      "parent": "whisker_right_2",
+      "pivot": [
+        -15.0,
+        13.5,
+        45.5
+      ]
+    },
+    {
+      "name": "whisker_right_4",
+      "parent": "whisker_right_3",
+      "pivot": [
+        -17.5,
+        14.5,
+        42.5
+      ]
+    },
+    {
+      "name": "front_left_upper",
+      "parent": "axial_03",
+      "pivot": [
+        5.756,
+        18.2,
+        10.0
+      ]
+    },
+    {
+      "name": "front_left_lower",
+      "parent": "front_left_upper",
+      "pivot": [
+        9.956,
+        11.7,
+        10.8
+      ]
+    },
+    {
+      "name": "front_left_paw",
+      "parent": "front_left_lower",
+      "pivot": [
+        11.756,
+        5.7,
+        13.0
+      ]
+    },
+    {
+      "name": "front_right_upper",
+      "parent": "axial_03",
+      "pivot": [
+        -2.156,
+        18.2,
+        10.0
+      ]
+    },
+    {
+      "name": "front_right_lower",
+      "parent": "front_right_upper",
+      "pivot": [
+        -6.356,
+        11.7,
+        10.8
+      ]
+    },
+    {
+      "name": "front_right_paw",
+      "parent": "front_right_lower",
+      "pivot": [
+        -8.156,
+        5.7,
+        13.0
+      ]
+    },
+    {
+      "name": "rear_left_upper",
+      "parent": "axial_10",
+      "pivot": [
+        0.924,
+        17.7,
+        -32.0
+      ]
+    },
+    {
+      "name": "rear_left_lower",
+      "parent": "rear_left_upper",
+      "pivot": [
+        5.124,
+        11.2,
+        -31.2
+      ]
+    },
+    {
+      "name": "rear_left_paw",
+      "parent": "rear_left_lower",
+      "pivot": [
+        6.924,
+        5.2,
+        -29.0
+      ]
+    },
+    {
+      "name": "rear_right_upper",
+      "parent": "axial_10",
+      "pivot": [
+        -4.924,
+        17.7,
+        -32.0
+      ]
+    },
+    {
+      "name": "rear_right_lower",
+      "parent": "rear_right_upper",
+      "pivot": [
+        -9.124,
+        11.2,
+        -31.2
+      ]
+    },
+    {
+      "name": "rear_right_paw",
+      "parent": "rear_right_lower",
+      "pivot": [
+        -10.924,
+        5.2,
+        -29.0
+      ]
+    }
+  ],
+  "cubes": [
+    {
+      "name": "body_segment_00",
+      "bone": "axial_00",
+      "center": [
+        0.0,
+        18.0,
+        31.0017
+      ],
+      "size": [
+        8.0,
+        7.0,
+        6.5033
+      ],
+      "rotation": [
+        -1.9092,
+        180.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "neck segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_01",
+      "bone": "axial_01",
+      "center": [
+        0.0,
+        18.2,
+        25.0303
+      ],
+      "size": [
+        8.5,
+        7.2,
+        6.5605
+      ],
+      "rotation": [
+        -2.8373,
+        172.4054,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.2,
+        22.0
+      ],
+      "role": "neck segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_02",
+      "bone": "axial_02",
+      "center": [
+        0.8,
+        18.5,
+        19.043
+      ],
+      "size": [
+        9.0,
+        7.5,
+        6.586
+      ],
+      "rotation": [
+        -1.8832,
+        170.5377,
+        0.0
+      ],
+      "origin": [
+        0.8,
+        18.5,
+        16.0
+      ],
+      "role": "neck segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_03",
+      "bone": "axial_03",
+      "center": [
+        1.8,
+        18.7,
+        13.027
+      ],
+      "size": [
+        9.2,
+        7.6,
+        6.5539
+      ],
+      "rotation": [
+        3.7885,
+        173.3456,
+        0.0
+      ],
+      "origin": [
+        1.8,
+        18.7,
+        10.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_04",
+      "bone": "axial_04",
+      "center": [
+        2.5,
+        18.3,
+        7.0141
+      ],
+      "size": [
+        9.0,
+        7.5,
+        6.5283
+      ],
+      "rotation": [
+        4.7577,
+        -177.1376,
+        0.0
+      ],
+      "origin": [
+        2.5,
+        18.3,
+        4.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_05",
+      "bone": "axial_05",
+      "center": [
+        2.2,
+        17.8,
+        1.0369
+      ],
+      "size": [
+        8.8,
+        7.3,
+        6.5737
+      ],
+      "rotation": [
+        4.722,
+        -172.4054,
+        0.0
+      ],
+      "origin": [
+        2.2,
+        17.8,
+        -2.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_06",
+      "bone": "axial_06",
+      "center": [
+        1.4,
+        17.3,
+        -4.9369
+      ],
+      "size": [
+        8.5,
+        7.0,
+        6.6262
+      ],
+      "rotation": [
+        2.8069,
+        -168.6901,
+        0.0
+      ],
+      "origin": [
+        1.4,
+        17.3,
+        -8.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_07",
+      "bone": "axial_07",
+      "center": [
+        0.2,
+        17.0,
+        -10.939
+      ],
+      "size": [
+        8.2,
+        6.8,
+        6.6221
+      ],
+      "rotation": [
+        -1.8721,
+        -168.6901,
+        0.0
+      ],
+      "origin": [
+        0.2,
+        17.0,
+        -14.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_08",
+      "bone": "axial_08",
+      "center": [
+        -1.0,
+        17.2,
+        -16.9631
+      ],
+      "size": [
+        7.8,
+        6.4,
+        6.5737
+      ],
+      "rotation": [
+        -4.722,
+        -172.4054,
+        0.0
+      ],
+      "origin": [
+        -1.0,
+        17.2,
+        -20.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_09",
+      "bone": "axial_09",
+      "center": [
+        -1.8,
+        17.7,
+        -22.9879
+      ],
+      "size": [
+        7.3,
+        6.0,
+        6.5241
+      ],
+      "rotation": [
+        -4.761,
+        -178.0908,
+        0.0
+      ],
+      "origin": [
+        -1.8,
+        17.7,
+        -26.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_10",
+      "bone": "axial_10",
+      "center": [
+        -2.0,
+        18.2,
+        -28.9896
+      ],
+      "size": [
+        6.8,
+        5.6,
+        6.5208
+      ],
+      "rotation": [
+        -2.8561,
+        176.1859,
+        0.0
+      ],
+      "origin": [
+        -2.0,
+        18.2,
+        -32.0
+      ],
+      "role": "serpentine body segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_11",
+      "bone": "axial_11",
+      "center": [
+        -1.6,
+        18.5,
+        -34.9718
+      ],
+      "size": [
+        6.2,
+        5.1,
+        6.5564
+      ],
+      "rotation": [
+        1.8924,
+        172.4054,
+        0.0
+      ],
+      "origin": [
+        -1.6,
+        18.5,
+        -38.0
+      ],
+      "role": "tail segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_12",
+      "bone": "axial_12",
+      "center": [
+        -0.8,
+        18.3,
+        -40.9599
+      ],
+      "size": [
+        5.5,
+        4.6,
+        6.5803
+      ],
+      "rotation": [
+        3.772,
+        171.4692,
+        0.0
+      ],
+      "origin": [
+        -0.8,
+        18.3,
+        -44.0
+      ],
+      "role": "tail segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_13",
+      "bone": "axial_13",
+      "center": [
+        0.1,
+        17.9,
+        -46.9631
+      ],
+      "size": [
+        4.8,
+        4.0,
+        6.5737
+      ],
+      "rotation": [
+        4.722,
+        172.4054,
+        0.0
+      ],
+      "origin": [
+        0.1,
+        17.9,
+        -50.0
+      ],
+      "role": "tail segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_14",
+      "bone": "axial_14",
+      "center": [
+        0.9,
+        17.4,
+        -53.2355
+      ],
+      "size": [
+        4.0,
+        3.4,
+        6.029
+      ],
+      "rotation": [
+        4.1487,
+        175.8404,
+        0.0
+      ],
+      "origin": [
+        0.9,
+        17.4,
+        -56.0
+      ],
+      "role": "tail segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "body_segment_15",
+      "bone": "axial_15",
+      "center": [
+        1.3,
+        17.0,
+        -58.9935
+      ],
+      "size": [
+        3.2,
+        2.8,
+        5.513
+      ],
+      "rotation": [
+        3.4309,
+        177.7094,
+        0.0
+      ],
+      "origin": [
+        1.3,
+        17.0,
+        -61.5
+      ],
+      "role": "tail segment",
+      "material": "jade_scales",
+      "faces": {
+        "down": {
+          "material": "gold_belly"
+        }
+      }
+    },
+    {
+      "name": "cranium",
+      "bone": "head",
+      "center": [
+        0.0,
+        20.2,
+        33.0
+      ],
+      "size": [
+        10.0,
+        8.5,
+        10.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "broad ox-like head",
+      "material": "jade_scales",
+      "faces": {}
+    },
+    {
+      "name": "upper_snout",
+      "bone": "head",
+      "center": [
+        0.0,
+        18.2,
+        40.5
+      ],
+      "size": [
+        8.0,
+        5.0,
+        7.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "upper muzzle",
+      "material": "jade_light",
+      "faces": {}
+    },
+    {
+      "name": "lower_jaw",
+      "bone": "jaw",
+      "center": [
+        0.0,
+        15.3,
+        40.2
+      ],
+      "size": [
+        8.0,
+        2.5,
+        7.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        16.0,
+        38.0
+      ],
+      "role": "articulated lower jaw",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "eye_left",
+      "bone": "head",
+      "center": [
+        4.7,
+        21.8,
+        35.2
+      ],
+      "size": [
+        3.0,
+        3.2,
+        3.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "bulging left eye",
+      "material": "eye_gold",
+      "faces": {}
+    },
+    {
+      "name": "eye_right",
+      "bone": "head",
+      "center": [
+        -4.7,
+        21.8,
+        35.2
+      ],
+      "size": [
+        3.0,
+        3.2,
+        3.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "bulging right eye",
+      "material": "eye_gold",
+      "faces": {}
+    },
+    {
+      "name": "brow_left",
+      "bone": "head",
+      "center": [
+        4.4,
+        23.7,
+        35.0
+      ],
+      "size": [
+        2.2,
+        2.0,
+        5.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "left heavy brow",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "brow_right",
+      "bone": "head",
+      "center": [
+        -4.4,
+        23.7,
+        35.0
+      ],
+      "size": [
+        2.2,
+        2.0,
+        5.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "right heavy brow",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "ear_left",
+      "bone": "head",
+      "center": [
+        5.5,
+        21.4,
+        29.7
+      ],
+      "size": [
+        2.0,
+        4.5,
+        3.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "left pointed ear",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "ear_right",
+      "bone": "head",
+      "center": [
+        -5.5,
+        21.4,
+        29.7
+      ],
+      "size": [
+        2.0,
+        4.5,
+        3.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "right pointed ear",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "chin_beard",
+      "bone": "jaw",
+      "center": [
+        0.0,
+        12.8,
+        36.8
+      ],
+      "size": [
+        3.5,
+        4.0,
+        5.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        16.0,
+        38.0
+      ],
+      "role": "catfish beard",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "nose_bridge",
+      "bone": "head",
+      "center": [
+        0.0,
+        20.0,
+        38.5
+      ],
+      "size": [
+        4.5,
+        3.5,
+        5.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "nose bridge",
+      "material": "jade_light",
+      "faces": {}
+    },
+    {
+      "name": "nose_pad",
+      "bone": "head",
+      "center": [
+        0.0,
+        18.6,
+        44.4
+      ],
+      "size": [
+        7.0,
+        4.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "wide nostril pad",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "mane_crown_left",
+      "bone": "head",
+      "center": [
+        3.4,
+        26.2,
+        32.5
+      ],
+      "size": [
+        2.8,
+        5.5,
+        3.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -25.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_crown_right",
+      "bone": "head",
+      "center": [
+        -3.4,
+        26.2,
+        32.5
+      ],
+      "size": [
+        2.8,
+        5.5,
+        3.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        25.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_cheek_left",
+      "bone": "head",
+      "center": [
+        6.7,
+        20.2,
+        32.0
+      ],
+      "size": [
+        3.0,
+        5.0,
+        3.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -35.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_cheek_right",
+      "bone": "head",
+      "center": [
+        -6.7,
+        20.2,
+        32.0
+      ],
+      "size": [
+        3.0,
+        5.0,
+        3.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        35.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_jowl_left",
+      "bone": "head",
+      "center": [
+        5.4,
+        15.7,
+        33.0
+      ],
+      "size": [
+        3.0,
+        4.5,
+        3.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        35.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_jowl_right",
+      "bone": "head",
+      "center": [
+        -5.4,
+        15.7,
+        33.0
+      ],
+      "size": [
+        3.0,
+        4.5,
+        3.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -35.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_neck_left",
+      "bone": "head",
+      "center": [
+        5.0,
+        20.8,
+        27.5
+      ],
+      "size": [
+        3.0,
+        5.5,
+        4.0
+      ],
+      "rotation": [
+        15.0,
+        0.0,
+        -25.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_neck_right",
+      "bone": "head",
+      "center": [
+        -5.0,
+        20.8,
+        27.5
+      ],
+      "size": [
+        3.0,
+        5.5,
+        4.0
+      ],
+      "rotation": [
+        15.0,
+        0.0,
+        25.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_neck_top",
+      "bone": "head",
+      "center": [
+        0.0,
+        24.0,
+        27.0
+      ],
+      "size": [
+        3.0,
+        5.0,
+        4.0
+      ],
+      "rotation": [
+        20.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "mane_throat",
+      "bone": "head",
+      "center": [
+        0.0,
+        14.2,
+        28.2
+      ],
+      "size": [
+        3.0,
+        5.0,
+        4.0
+      ],
+      "rotation": [
+        -20.0,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        0.0,
+        18.0,
+        28.0
+      ],
+      "role": "lion mane tuft",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "horn_left_base",
+      "bone": "horn_left_0",
+      "center": [
+        3.0,
+        24.5,
+        34.7386
+      ],
+      "size": [
+        1.5,
+        1.5,
+        5.9772
+      ],
+      "rotation": [
+        -65.9052,
+        169.6952,
+        0.0
+      ],
+      "origin": [
+        3.0,
+        24.5,
+        32.0
+      ],
+      "role": "left deer antler base",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_left_shaft",
+      "bone": "horn_left_1",
+      "center": [
+        3.4,
+        29.5,
+        32.7871
+      ],
+      "size": [
+        1.3,
+        1.3,
+        6.4741
+      ],
+      "rotation": [
+        -51.8808,
+        167.4712,
+        0.0
+      ],
+      "origin": [
+        3.4,
+        29.5,
+        29.8
+      ],
+      "role": "left deer antler shaft",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_left_tip",
+      "bone": "horn_left_2",
+      "center": [
+        4.2,
+        34.2,
+        29.0478
+      ],
+      "size": [
+        1.0,
+        1.0,
+        6.1956
+      ],
+      "rotation": [
+        -41.8498,
+        171.8699,
+        0.0
+      ],
+      "origin": [
+        4.2,
+        34.2,
+        26.2
+      ],
+      "role": "left deer antler tip",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_left_front_branch",
+      "bone": "horn_left_3",
+      "center": [
+        3.5,
+        29.8,
+        31.6192
+      ],
+      "size": [
+        1.0,
+        1.0,
+        4.9385
+      ],
+      "rotation": [
+        -37.468,
+        96.5198,
+        0.0
+      ],
+      "origin": [
+        3.5,
+        29.8,
+        29.4
+      ],
+      "role": "left deer antler front_branch",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_left_rear_branch",
+      "bone": "horn_left_4",
+      "center": [
+        4.1,
+        34.0,
+        28.7027
+      ],
+      "size": [
+        0.9,
+        0.9,
+        5.1054
+      ],
+      "rotation": [
+        -28.5351,
+        129.9869,
+        0.0
+      ],
+      "origin": [
+        4.1,
+        34.0,
+        26.4
+      ],
+      "role": "left deer antler rear_branch",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_right_base",
+      "bone": "horn_right_0",
+      "center": [
+        -3.0,
+        24.5,
+        34.7386
+      ],
+      "size": [
+        1.5,
+        1.5,
+        5.9772
+      ],
+      "rotation": [
+        -65.9052,
+        -169.6952,
+        0.0
+      ],
+      "origin": [
+        -3.0,
+        24.5,
+        32.0
+      ],
+      "role": "right deer antler base",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_right_shaft",
+      "bone": "horn_right_1",
+      "center": [
+        -3.4,
+        29.5,
+        32.7871
+      ],
+      "size": [
+        1.3,
+        1.3,
+        6.4741
+      ],
+      "rotation": [
+        -51.8808,
+        -167.4712,
+        0.0
+      ],
+      "origin": [
+        -3.4,
+        29.5,
+        29.8
+      ],
+      "role": "right deer antler shaft",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_right_tip",
+      "bone": "horn_right_2",
+      "center": [
+        -4.2,
+        34.2,
+        29.0478
+      ],
+      "size": [
+        1.0,
+        1.0,
+        6.1956
+      ],
+      "rotation": [
+        -41.8498,
+        -171.8699,
+        0.0
+      ],
+      "origin": [
+        -4.2,
+        34.2,
+        26.2
+      ],
+      "role": "right deer antler tip",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_right_front_branch",
+      "bone": "horn_right_3",
+      "center": [
+        -3.5,
+        29.8,
+        31.6192
+      ],
+      "size": [
+        1.0,
+        1.0,
+        4.9385
+      ],
+      "rotation": [
+        -37.468,
+        -96.5198,
+        0.0
+      ],
+      "origin": [
+        -3.5,
+        29.8,
+        29.4
+      ],
+      "role": "right deer antler front_branch",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "horn_right_rear_branch",
+      "bone": "horn_right_4",
+      "center": [
+        -4.1,
+        34.0,
+        28.7027
+      ],
+      "size": [
+        0.9,
+        0.9,
+        5.1054
+      ],
+      "rotation": [
+        -28.5351,
+        -129.9869,
+        0.0
+      ],
+      "origin": [
+        -4.1,
+        34.0,
+        26.4
+      ],
+      "role": "right deer antler rear_branch",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "whisker_left_segment_0",
+      "bone": "whisker_left_0",
+      "center": [
+        3.5,
+        17.2,
+        45.5244
+      ],
+      "size": [
+        0.8,
+        0.8,
+        5.5488
+      ],
+      "rotation": [
+        7.9696,
+        53.1301,
+        0.0
+      ],
+      "origin": [
+        3.5,
+        17.2,
+        43.0
+      ],
+      "role": "left catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_left_segment_1",
+      "bone": "whisker_left_1",
+      "center": [
+        7.5,
+        16.5,
+        48.1937
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.8875
+      ],
+      "rotation": [
+        19.9916,
+        75.9638,
+        0.0
+      ],
+      "origin": [
+        7.5,
+        16.5,
+        46.0
+      ],
+      "role": "left catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_left_segment_2",
+      "bone": "whisker_left_2",
+      "center": [
+        11.5,
+        15.0,
+        49.0463
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.5927
+      ],
+      "rotation": [
+        21.5004,
+        113.1986,
+        0.0
+      ],
+      "origin": [
+        11.5,
+        15.0,
+        47.0
+      ],
+      "role": "left catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_left_segment_3",
+      "bone": "whisker_left_3",
+      "center": [
+        15.0,
+        13.5,
+        47.5156
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.5311
+      ],
+      "rotation": [
+        -14.3633,
+        140.1944,
+        0.0
+      ],
+      "origin": [
+        15.0,
+        13.5,
+        45.5
+      ],
+      "role": "left catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_left_segment_4",
+      "bone": "whisker_left_4",
+      "center": [
+        17.5,
+        14.5,
+        44.32
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.1401
+      ],
+      "rotation": [
+        -33.3288,
+        170.5377,
+        0.0
+      ],
+      "origin": [
+        17.5,
+        14.5,
+        42.5
+      ],
+      "role": "left catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_right_segment_0",
+      "bone": "whisker_right_0",
+      "center": [
+        -3.5,
+        17.2,
+        45.5244
+      ],
+      "size": [
+        0.8,
+        0.8,
+        5.5488
+      ],
+      "rotation": [
+        7.9696,
+        -53.1301,
+        0.0
+      ],
+      "origin": [
+        -3.5,
+        17.2,
+        43.0
+      ],
+      "role": "right catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_right_segment_1",
+      "bone": "whisker_right_1",
+      "center": [
+        -7.5,
+        16.5,
+        48.1937
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.8875
+      ],
+      "rotation": [
+        19.9916,
+        -75.9638,
+        0.0
+      ],
+      "origin": [
+        -7.5,
+        16.5,
+        46.0
+      ],
+      "role": "right catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_right_segment_2",
+      "bone": "whisker_right_2",
+      "center": [
+        -11.5,
+        15.0,
+        49.0463
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.5927
+      ],
+      "rotation": [
+        21.5004,
+        -113.1986,
+        0.0
+      ],
+      "origin": [
+        -11.5,
+        15.0,
+        47.0
+      ],
+      "role": "right catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_right_segment_3",
+      "bone": "whisker_right_3",
+      "center": [
+        -15.0,
+        13.5,
+        47.5156
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.5311
+      ],
+      "rotation": [
+        -14.3633,
+        -140.1944,
+        0.0
+      ],
+      "origin": [
+        -15.0,
+        13.5,
+        45.5
+      ],
+      "role": "right catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "whisker_right_segment_4",
+      "bone": "whisker_right_4",
+      "center": [
+        -17.5,
+        14.5,
+        44.32
+      ],
+      "size": [
+        0.8,
+        0.8,
+        4.1401
+      ],
+      "rotation": [
+        -33.3288,
+        -170.5377,
+        0.0
+      ],
+      "origin": [
+        -17.5,
+        14.5,
+        42.5
+      ],
+      "role": "right catfish whisker segment",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "front_left_upper_leg",
+      "bone": "front_left_upper",
+      "center": [
+        5.756,
+        18.2,
+        13.8901
+      ],
+      "size": [
+        3.2,
+        3.2,
+        8.2801
+      ],
+      "rotation": [
+        56.6642,
+        79.2157,
+        0.0
+      ],
+      "origin": [
+        5.756,
+        18.2,
+        10.0
+      ],
+      "role": "front_left muscular upper leg",
+      "material": "jade_scales",
+      "faces": {}
+    },
+    {
+      "name": "front_left_lower_leg",
+      "bone": "front_left_lower",
+      "center": [
+        9.956,
+        11.7,
+        14.1196
+      ],
+      "size": [
+        2.5,
+        2.5,
+        7.1393
+      ],
+      "rotation": [
+        64.6505,
+        39.2894,
+        0.0
+      ],
+      "origin": [
+        9.956,
+        11.7,
+        10.8
+      ],
+      "role": "front_left lower leg",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "front_left_paw",
+      "bone": "front_left_paw",
+      "center": [
+        11.756,
+        5.7,
+        15.0616
+      ],
+      "size": [
+        4.8,
+        2.2,
+        4.6231
+      ],
+      "rotation": [
+        14.0362,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        11.756,
+        5.7,
+        13.0
+      ],
+      "role": "front_left gold clawed paw",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "front_left_claw_0",
+      "bone": "front_left_paw",
+      "center": [
+        10.356,
+        4.2,
+        19.7492
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        -9.2764,
+        0.0
+      ],
+      "origin": [
+        11.756,
+        5.7,
+        13.0
+      ],
+      "role": "front_left eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "front_left_claw_1",
+      "bone": "front_left_paw",
+      "center": [
+        11.756,
+        4.2,
+        19.7297
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5594
+      ],
+      "rotation": [
+        11.3099,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        11.756,
+        5.7,
+        13.0
+      ],
+      "role": "front_left eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "front_left_claw_2",
+      "bone": "front_left_paw",
+      "center": [
+        13.156,
+        4.2,
+        19.7492
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        9.2764,
+        0.0
+      ],
+      "origin": [
+        11.756,
+        5.7,
+        13.0
+      ],
+      "role": "front_left eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "front_right_upper_leg",
+      "bone": "front_right_upper",
+      "center": [
+        -2.156,
+        18.2,
+        13.8901
+      ],
+      "size": [
+        3.2,
+        3.2,
+        8.2801
+      ],
+      "rotation": [
+        56.6642,
+        -79.2157,
+        0.0
+      ],
+      "origin": [
+        -2.156,
+        18.2,
+        10.0
+      ],
+      "role": "front_right muscular upper leg",
+      "material": "jade_scales",
+      "faces": {}
+    },
+    {
+      "name": "front_right_lower_leg",
+      "bone": "front_right_lower",
+      "center": [
+        -6.356,
+        11.7,
+        14.1196
+      ],
+      "size": [
+        2.5,
+        2.5,
+        7.1393
+      ],
+      "rotation": [
+        64.6505,
+        -39.2894,
+        0.0
+      ],
+      "origin": [
+        -6.356,
+        11.7,
+        10.8
+      ],
+      "role": "front_right lower leg",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "front_right_paw",
+      "bone": "front_right_paw",
+      "center": [
+        -8.156,
+        5.7,
+        15.0616
+      ],
+      "size": [
+        4.8,
+        2.2,
+        4.6231
+      ],
+      "rotation": [
+        14.0362,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        -8.156,
+        5.7,
+        13.0
+      ],
+      "role": "front_right gold clawed paw",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "front_right_claw_0",
+      "bone": "front_right_paw",
+      "center": [
+        -6.756,
+        4.2,
+        19.7492
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        9.2764,
+        0.0
+      ],
+      "origin": [
+        -8.156,
+        5.7,
+        13.0
+      ],
+      "role": "front_right eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "front_right_claw_1",
+      "bone": "front_right_paw",
+      "center": [
+        -8.156,
+        4.2,
+        19.7297
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5594
+      ],
+      "rotation": [
+        11.3099,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        -8.156,
+        5.7,
+        13.0
+      ],
+      "role": "front_right eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "front_right_claw_2",
+      "bone": "front_right_paw",
+      "center": [
+        -9.556,
+        4.2,
+        19.7492
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        -9.2764,
+        0.0
+      ],
+      "origin": [
+        -8.156,
+        5.7,
+        13.0
+      ],
+      "role": "front_right eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "rear_left_upper_leg",
+      "bone": "rear_left_upper",
+      "center": [
+        0.924,
+        17.7,
+        -28.1099
+      ],
+      "size": [
+        3.2,
+        3.2,
+        8.2801
+      ],
+      "rotation": [
+        56.6642,
+        79.2157,
+        0.0
+      ],
+      "origin": [
+        0.924,
+        17.7,
+        -32.0
+      ],
+      "role": "rear_left muscular upper leg",
+      "material": "jade_scales",
+      "faces": {}
+    },
+    {
+      "name": "rear_left_lower_leg",
+      "bone": "rear_left_lower",
+      "center": [
+        5.124,
+        11.2,
+        -27.8804
+      ],
+      "size": [
+        2.5,
+        2.5,
+        7.1393
+      ],
+      "rotation": [
+        64.6505,
+        39.2894,
+        0.0
+      ],
+      "origin": [
+        5.124,
+        11.2,
+        -31.2
+      ],
+      "role": "rear_left lower leg",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "rear_left_paw",
+      "bone": "rear_left_paw",
+      "center": [
+        6.924,
+        5.2,
+        -26.9384
+      ],
+      "size": [
+        4.8,
+        2.2,
+        4.6231
+      ],
+      "rotation": [
+        14.0362,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        6.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_left gold clawed paw",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "rear_left_claw_0",
+      "bone": "rear_left_paw",
+      "center": [
+        5.524,
+        3.7,
+        -22.2508
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        -9.2764,
+        0.0
+      ],
+      "origin": [
+        6.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_left eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "rear_left_claw_1",
+      "bone": "rear_left_paw",
+      "center": [
+        6.924,
+        3.7,
+        -22.2703
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5594
+      ],
+      "rotation": [
+        11.3099,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        6.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_left eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "rear_left_claw_2",
+      "bone": "rear_left_paw",
+      "center": [
+        8.324,
+        3.7,
+        -22.2508
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        9.2764,
+        0.0
+      ],
+      "origin": [
+        6.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_left eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "rear_right_upper_leg",
+      "bone": "rear_right_upper",
+      "center": [
+        -4.924,
+        17.7,
+        -28.1099
+      ],
+      "size": [
+        3.2,
+        3.2,
+        8.2801
+      ],
+      "rotation": [
+        56.6642,
+        -79.2157,
+        0.0
+      ],
+      "origin": [
+        -4.924,
+        17.7,
+        -32.0
+      ],
+      "role": "rear_right muscular upper leg",
+      "material": "jade_scales",
+      "faces": {}
+    },
+    {
+      "name": "rear_right_lower_leg",
+      "bone": "rear_right_lower",
+      "center": [
+        -9.124,
+        11.2,
+        -27.8804
+      ],
+      "size": [
+        2.5,
+        2.5,
+        7.1393
+      ],
+      "rotation": [
+        64.6505,
+        -39.2894,
+        0.0
+      ],
+      "origin": [
+        -9.124,
+        11.2,
+        -31.2
+      ],
+      "role": "rear_right lower leg",
+      "material": "deep_jade",
+      "faces": {}
+    },
+    {
+      "name": "rear_right_paw",
+      "bone": "rear_right_paw",
+      "center": [
+        -10.924,
+        5.2,
+        -26.9384
+      ],
+      "size": [
+        4.8,
+        2.2,
+        4.6231
+      ],
+      "rotation": [
+        14.0362,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        -10.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_right gold clawed paw",
+      "material": "gold_belly",
+      "faces": {}
+    },
+    {
+      "name": "rear_right_claw_0",
+      "bone": "rear_right_paw",
+      "center": [
+        -9.524,
+        3.7,
+        -22.2508
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        9.2764,
+        0.0
+      ],
+      "origin": [
+        -10.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_right eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "rear_right_claw_1",
+      "bone": "rear_right_paw",
+      "center": [
+        -10.924,
+        3.7,
+        -22.2703
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5594
+      ],
+      "rotation": [
+        11.3099,
+        0.0,
+        0.0
+      ],
+      "origin": [
+        -10.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_right eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "rear_right_claw_2",
+      "bone": "rear_right_paw",
+      "center": [
+        -12.324,
+        3.7,
+        -22.2508
+      ],
+      "size": [
+        0.7,
+        0.7,
+        3.5984
+      ],
+      "rotation": [
+        11.1658,
+        -9.2764,
+        0.0
+      ],
+      "origin": [
+        -10.924,
+        5.2,
+        -29.0
+      ],
+      "role": "rear_right eagle talon",
+      "material": "bone",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_00",
+      "bone": "axial_01",
+      "center": [
+        0.0,
+        23.969,
+        22.0
+      ],
+      "size": [
+        1.6,
+        4.5,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "origin": [
+        0.0,
+        18.2,
+        22.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_01",
+      "bone": "axial_02",
+      "center": [
+        0.8,
+        24.3665,
+        16.0
+      ],
+      "size": [
+        1.6,
+        4.37,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -8.0
+      ],
+      "origin": [
+        0.8,
+        18.5,
+        16.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_02",
+      "bone": "axial_03",
+      "center": [
+        1.8,
+        24.56,
+        10.0
+      ],
+      "size": [
+        1.6,
+        4.24,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "origin": [
+        1.8,
+        18.7,
+        10.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_03",
+      "bone": "axial_04",
+      "center": [
+        2.5,
+        24.0495,
+        4.0
+      ],
+      "size": [
+        1.6,
+        4.11,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -8.0
+      ],
+      "origin": [
+        2.5,
+        18.3,
+        4.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_04",
+      "bone": "axial_05",
+      "center": [
+        2.2,
+        23.387,
+        -2.0
+      ],
+      "size": [
+        1.6,
+        3.98,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "origin": [
+        2.2,
+        17.8,
+        -2.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_05",
+      "bone": "axial_06",
+      "center": [
+        1.4,
+        22.6725,
+        -8.0
+      ],
+      "size": [
+        1.6,
+        3.85,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -8.0
+      ],
+      "origin": [
+        1.4,
+        17.3,
+        -8.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_06",
+      "bone": "axial_07",
+      "center": [
+        0.2,
+        22.21,
+        -14.0
+      ],
+      "size": [
+        1.6,
+        3.72,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "origin": [
+        0.2,
+        17.0,
+        -14.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_07",
+      "bone": "axial_08",
+      "center": [
+        -1.0,
+        22.1435,
+        -20.0
+      ],
+      "size": [
+        1.6,
+        3.59,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -8.0
+      ],
+      "origin": [
+        -1.0,
+        17.2,
+        -20.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_08",
+      "bone": "axial_09",
+      "center": [
+        -1.8,
+        22.377,
+        -26.0
+      ],
+      "size": [
+        1.6,
+        3.46,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "origin": [
+        -1.8,
+        17.7,
+        -26.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_09",
+      "bone": "axial_10",
+      "center": [
+        -2.0,
+        22.6105,
+        -32.0
+      ],
+      "size": [
+        1.6,
+        3.33,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -8.0
+      ],
+      "origin": [
+        -2.0,
+        18.2,
+        -32.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "dorsal_spine_10",
+      "bone": "axial_11",
+      "center": [
+        -1.6,
+        22.592,
+        -38.0
+      ],
+      "size": [
+        1.6,
+        3.2,
+        2.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "origin": [
+        -1.6,
+        18.5,
+        -38.0
+      ],
+      "role": "dorsal flame ridge",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "tail_flame_0",
+      "bone": "axial_15",
+      "center": [
+        1.5,
+        16.7,
+        -63.1366
+      ],
+      "size": [
+        1.6,
+        2.8,
+        7.2268
+      ],
+      "rotation": [
+        -48.0128,
+        180.0,
+        0.0
+      ],
+      "origin": [
+        1.5,
+        16.7,
+        -66.5
+      ],
+      "role": "flame-shaped tail fin",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "tail_flame_1",
+      "bone": "axial_15",
+      "center": [
+        1.5,
+        16.7,
+        -63.2102
+      ],
+      "size": [
+        1.6,
+        2.8,
+        7.0795
+      ],
+      "rotation": [
+        -0.0,
+        136.8476,
+        0.0
+      ],
+      "origin": [
+        1.5,
+        16.7,
+        -66.5
+      ],
+      "role": "flame-shaped tail fin",
+      "material": "vermilion_mane",
+      "faces": {}
+    },
+    {
+      "name": "tail_flame_2",
+      "bone": "axial_15",
+      "center": [
+        1.5,
+        16.7,
+        -63.2102
+      ],
+      "size": [
+        1.6,
+        2.8,
+        7.0795
+      ],
+      "rotation": [
+        -0.0,
+        -136.8476,
+        0.0
+      ],
+      "origin": [
+        1.5,
+        16.7,
+        -66.5
+      ],
+      "role": "flame-shaped tail fin",
+      "material": "vermilion_mane",
+      "faces": {}
+    }
+  ],
+  "landmarks": [
+    {
+      "name": "left_pupil",
+      "cube": "eye_left",
+      "face": "east",
+      "center_uv": [
+        0.5,
+        0.5
+      ],
+      "size": [
+        2,
+        2
+      ],
+      "color": "#191714",
+      "center_color": "#76ddd4"
+    },
+    {
+      "name": "right_pupil",
+      "cube": "eye_right",
+      "face": "west",
+      "center_uv": [
+        0.5,
+        0.5
+      ],
+      "size": [
+        2,
+        2
+      ],
+      "color": "#191714",
+      "center_color": "#76ddd4"
+    },
+    {
+      "name": "left_nostril",
+      "cube": "nose_pad",
+      "face": "south",
+      "center_uv": [
+        0.3,
+        0.52
+      ],
+      "size": [
+        2,
+        2
+      ],
+      "color": "#191714",
+      "center_color": "#191714"
+    },
+    {
+      "name": "right_nostril",
+      "cube": "nose_pad",
+      "face": "south",
+      "center_uv": [
+        0.7,
+        0.52
+      ],
+      "size": [
+        2,
+        2
+      ],
+      "color": "#191714",
+      "center_color": "#191714"
+    },
+    {
+      "name": "mouth_line",
+      "cube": "lower_jaw",
+      "face": "south",
+      "center_uv": [
+        0.5,
+        0.3
+      ],
+      "size": [
+        5,
+        1
+      ],
+      "color": "#191714",
+      "center_color": "#642a27"
+    }
+  ],
+  "collision": {
+    "width": 3.0,
+    "height": 3.2,
+    "eye_height": 2.55
+  },
+  "generation": {
+    "lane": "direct-cuboid",
+    "authoring": "Original deterministic cuboid reconstruction from project concept art",
+    "source_references": [
+      {
+        "title": "Eleven Dragons",
+        "institution": "Smithsonian National Museum of Asian Art",
+        "license": "CC0",
+        "url": "https://asia-archive.si.edu/object/F1919.173/"
+      },
+      {
+        "title": "Mirror with a Coiling Dragon",
+        "institution": "Cleveland Museum of Art",
+        "license": "CC0",
+        "url": "https://www.clevelandart.org/art/1995.367"
+      },
+      {
+        "title": "Dragon",
+        "institution": "The Metropolitan Museum of Art",
+        "license": "Public Domain / Open Access",
+        "url": "https://www.metmuseum.org/art/collection/search/36431"
+      }
+    ]
+  }
+}

@@ -40,7 +40,8 @@ displayName="${mod_name}" #mandatory
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+A high-altitude Chinese dragon boss with fully articulated serpentine flight,
+four distinct attacks, and rare mountain spawning.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

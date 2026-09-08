@@ -1,0 +1,43 @@
+{
+  "aspect_ratio": 1.5,
+  "dominant_colors": [
+    {
+      "hex": "#faffff",
+      "pixels": 8916
+    },
+    {
+      "hex": "#315e4a",
+      "pixels": 968
+    },
+    {
+      "hex": "#d8c8a1",
+      "pixels": 419
+    },
+    {
+      "hex": "#a98846",
+      "pixels": 209
+    },
+    {
+      "hex": "#4f918a",
+      "pixels": 175
+    },
+    {
+      "hex": "#96271a",
+      "pixels": 89
+    },
+    {
+      "hex": "#000002",
+      "pixels": 82
+    },
+    {
+      "hex": "#6dd2ca",
+      "pixels": 22
+    }
+  ],
+  "has_alpha": false,
+  "height": 1024,
+  "mode": "RGBA",
+  "path": "/Users/derekwang1/dragon/artifacts/chinese_dragon_boss/references/chinese_dragon_concept.png",
+  "sha256": "9cdf69be2eb5ecd36fb5591f18f3b1f788f5c695d3e7e601ccf8f29de2ca722c",
+  "width": 1536
+}
